@@ -23,9 +23,9 @@ tiers:
                     class: 'RobotFramework'
                     args:
                         suites:
-                            - /var/opt/OpenECOMP_ETE/robot/testsuites/robot-healthcheck-core.robot
-                        pythonpath:
-                            - /usr/local/lib/python-testing-utils/eteutils
+                            - /var/opt/OpenECOMP_ETE/robot/testsuites/health-check.robot
+                        include:
+                            - core
                         variablefile:
                             - '/share/config/integration_robot_properties.py'
                             - '/share/config/integration_vm_properties.py'
@@ -47,9 +47,9 @@ tiers:
                     class: 'RobotFramework'
                     args:
                         suites:
-                            - /var/opt/OpenECOMP_ETE/robot/testsuites/robot-api.robot
-                        pythonpath:
-                            - /usr/local/lib/python-testing-utils/eteutils
+                            - /var/opt/OpenECOMP_ETE/robot/testsuites/health-check.robot
+                        include:
+                            - api
                         variablefile:
                             - '/share/config/integration_robot_properties.py'
                             - '/share/config/integration_vm_properties.py'
@@ -71,9 +71,9 @@ tiers:
                     class: 'RobotFramework'
                     args:
                         suites:
-                            - /var/opt/OpenECOMP_ETE/robot/testsuites/robot-dcae.robot
-                        pythonpath:
-                            - /usr/local/lib/python-testing-utils/eteutils
+                            - /var/opt/OpenECOMP_ETE/robot/testsuites/health-check.robot
+                        include:
+                            - dcae
                         variablefile:
                             - '/share/config/integration_robot_properties.py'
                             - '/share/config/integration_vm_properties.py'
@@ -94,9 +94,9 @@ tiers:
                     class: 'RobotFramework'
                     args:
                         suites:
-                            - /var/opt/OpenECOMP_ETE/robot/testsuites/robot-multicloud.robot
-                        pythonpath:
-                            - /usr/local/lib/python-testing-utils/eteutils
+                            - /var/opt/OpenECOMP_ETE/robot/testsuites/health-check.robot
+                        include:
+                            - multicloud
                         variablefile:
                             - '/share/config/integration_robot_properties.py'
                             - '/share/config/integration_vm_properties.py'
@@ -118,9 +118,9 @@ tiers:
                     class: 'RobotFramework'
                     args:
                         suites:
-                            - /var/opt/OpenECOMP_ETE/robot/testsuites/robot-3rdparty.robot
-                        pythonpath:
-                            - /usr/local/lib/python-testing-utils/eteutils
+                            - /var/opt/OpenECOMP_ETE/robot/testsuites/health-check.robot
+                        include:
+                            - 3rdparty
                         variablefile:
                             - '/share/config/integration_robot_properties.py'
                             - '/share/config/integration_vm_properties.py'
